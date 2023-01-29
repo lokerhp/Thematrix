@@ -64,7 +64,7 @@ $formatted = "";
             background-color: #1a202c;
             color: white;
             border: 2px solid #1a202c;
-            border-radius: 5px;
+            border-radius: 15px;
             padding: 10px 20px;
             font-size: 20px;
             margin: 10px;
@@ -77,10 +77,10 @@ $formatted = "";
     <form method="post">
 
         <br>
-        <input type="submit" name="0" value="Uit" class="input"/>
-        <input type="submit" name="1" value="Kruis" class="input"/>
-        <input type="submit" name="2" value="Pijl Links" class="input"/>
-        <input type="submit" name="3" value="Pijl Rechts" class="input"/>
+        <input type="submit" name="0" value="Uit" class="input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
+        <input type="submit" name="1" value="Kruis" class="input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
+        <input type="submit" name="2" value="Pijl Links" class="input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
+        <input type="submit" name="3" value="Pijl Rechts" class="input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
     </form>
     </center>
 
