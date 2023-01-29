@@ -34,7 +34,7 @@ $formatted = "";
             plugins: [],
         };
     </script>
-    <title>The Matrix></title>
+    <title>The Matrix</title>
 </head>
 <body class="bg-gray-100">
 
@@ -60,29 +60,30 @@ $formatted = "";
         .square{
             border-radius: 15%;
         }
-
+        .input{
+            background-color: #1a202c;
+            color: white;
+            border: 2px solid #1a202c;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+        }
     </style>
-<!--    <div class="centered_square bg-slate-800">-->
-<!--        in center a big red cross-->
-<!--        <div class="cross text-red-700">-->
-<!--            <i class="fa-solid fa-xmark-large"></i>-->
-<!--        </div>-->
-<!--    </div>-->
     <center>
     <div class="flex items-center justify-center h-96 w-96 bg-slate-800 square">
-<!--        <i class="fas fa-times text-red-500 fa-10x"></i>-->
-<!--        <i class="fas fa-arrow-down rotate-45 ml-1 fa-10x text-white"></i>-->
         <?php echo $formatted; ?>
     </div>
-    </center>
     <form method="post">
 
         <br>
-        Uit <input type="submit" name="0"/><br>
-        Kruis <input type="submit" name="1"/><br>
-        Links <input type="submit" name="2"/><br>
-        Rechts <input type="submit" name="3"/><br>
+        <input type="submit" name="0" value="Uit" class="input"/>
+        <input type="submit" name="1" value="Kruis" class="input"/>
+        <input type="submit" name="2" value="Pijl Links" class="input"/>
+        <input type="submit" name="3" value="Pijl Rechts" class="input"/>
     </form>
+    </center>
+
 </h1>
 
 </body>
