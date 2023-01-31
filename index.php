@@ -73,7 +73,7 @@ $formatted = "";
         }
         .switch_button{
             color: white;
-            border: 2px solid #77B28C;
+            border: 2px solid #65a30d;
             border-radius: 5px;
             padding: 8px 16px;
             font-size: 20px;
