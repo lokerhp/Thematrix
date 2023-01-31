@@ -4,7 +4,7 @@ if(isset($_SESSION['loggedin'])){
     header("Location:home.php");
 }
 require_once "Board.php";
-$crossBoard = new Board(0, array(0=>0, 1=>1, 2=>2, 3=>3, 4=>4, 5=>5));
+$crossBoard = new Board(1, array(0=>0, 1=>1, 2=>2, 3=>3, 4=>4, 5=>5));
 $formatted = "";
 ?>
 
@@ -55,6 +55,9 @@ $formatted = "";
     } else if(isset($_POST['3'])) {
         $crossBoard->change(3);
         $formatted = $crossBoard->getFormatted();
+    } else if(isset($_POST['4'])) {
+        $crossBoard->change(4);
+        $formatted = $crossBoard->getFormatted();
     }
     ?>
     <style>
@@ -84,7 +87,7 @@ $formatted = "";
     <center>
 
         <div class="switcher">
-            <a href="#" class="switch_button disabled:opacity-75" disabled>Kruizen</a> <a class="switch_button disabled:opacity-75" href="cijfers.php">Cijfers</a>
+            <a href="index.php" class="switch_button disabled:opacity-75">Kruizen</a> <a class="switch_button disabled:opacity-75" href="cijfers.php" disabled>Cijfers</a>
         <br><br>
         </div>
     <div class="flex items-center justify-center h-96 w-96 bg-slate-800 square">
@@ -93,10 +96,11 @@ $formatted = "";
     <form method="post">
 
         <br>
-        <input type="submit" name="0" value="Uit" class="w-40 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
-        <input type="submit" name="1" value="Kruis" class="w-40 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
-        <input type="submit" name="2" value="Pijl Links" class="w-40 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
-        <input type="submit" name="3" value="Pijl Rechts" class="w-40 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
+        <input type="submit" name="0" value="Uit" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
+        <input type="submit" name="1" value="30" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
+        <input type="submit" name="2" value="50" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
+        <input type="submit" name="3" value="60" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
+        <input type="submit" name="4" value="70" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 4) echo "disabled"?>/>
     </form>
     </center>
 

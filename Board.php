@@ -119,15 +119,20 @@ class Board
         } else {
             switch ($this->getCurrent()){
                 case 0:
-                    return "Uit";
+                    $this->formatted = "";
+                    break;
                 case 1:
-                    return "30";
+                    $this->formatted = "<fff class=\"text-white fa-10x\">30</fff>";
+                    break;
                 case 2:
-                    return "50";
+                    $this->formatted = "<fff class=\"text-white fa-10x\">50</fff>";
+                    break;
                 case 3:
-                    return "60";
+                    $this->formatted = "<fff class=\"text-white fa-10x\">60</fff>";
+                    break;
                 case 4:
-                    return "70";
+                    $this->formatted = "<fff class=\"text-white fa-10x\">70</fff>";
+                    break;
             }
         }
         return "Error";
