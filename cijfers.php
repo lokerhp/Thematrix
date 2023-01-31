@@ -75,9 +75,8 @@ $formatted = "";
             margin: 10px;
         }
         .switch_button{
-            background-color: #77B28C;
             color: white;
-            border: 2px solid #77B28C;
+            border: 2px solid #65a30d;
             border-radius: 5px;
             padding: 8px 16px;
             font-size: 20px;
@@ -87,7 +86,7 @@ $formatted = "";
     <center>
 
         <div class="switcher">
-            <a href="index.php" class="switch_button disabled:opacity-75">Kruizen</a> <a class="switch_button disabled:opacity-75" href="cijfers.php" disabled>Cijfers</a>
+            <a href="index.php" class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700">Kruizen</a> <a class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" href="cijfers.php" disabled>Cijfers</a>
         <br><br>
         </div>
     <div class="flex items-center justify-center h-96 w-96 bg-slate-800 square">
@@ -96,11 +95,11 @@ $formatted = "";
     <form method="post">
 
         <br>
-        <input type="submit" name="0" value="Uit" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
-        <input type="submit" name="1" value="30" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
-        <input type="submit" name="2" value="50" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
-        <input type="submit" name="3" value="60" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
-        <input type="submit" name="4" value="70" class="w-20 input disabled:opacity-75" <?php if($crossBoard->getCurrent() == 4) echo "disabled"?>/>
+        <input type="submit" name="0" value="Uit" class="w-20 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
+        <input type="submit" name="1" value="30" class="w-20 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
+        <input type="submit" name="2" value="50" class="w-20 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
+        <input type="submit" name="3" value="60" class="w-20 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
+        <input type="submit" name="4" value="70" class="w-20 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 4) echo "disabled"?>/>
     </form>
     </center>
 
