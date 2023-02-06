@@ -5,7 +5,9 @@ if(isset($_SESSION['loggedin'])){
 }
 require_once "Board.php";
 $crossBoard = new Board(0, array(0=>0, 1=>1, 2=>2, 3=>3, 4=>4, 5=>5));
-$formatted = "";
+$crossBoard->change(2);
+$formatted= $crossBoard->getFormatted();
+//$formatted = "<i class=\"fas fa-arrow-down rotate-45 ml-1 fa-10x text-white\"></i>";
 ?>
 
 <!doctype html>
