@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION['loggedin'])){
+    header("location:index.php");
+}
+if(isset($_POST['pass'])){
+    if($_POST['pass'] == "PWS"){
+        $_SESSION['logged'] = "true";
+        header("location:index.php");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>

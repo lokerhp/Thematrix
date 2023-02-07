@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['loggedin'])){
-    header("Location:home.php");
+if(!(isset($_SESSION['loggedin']))){
+    header("Location:login.php");
 }
 require_once "Board.php";
 $crossBoard = new Board(1, array(0=>0, 1=>1, 2=>2, 3=>3, 4=>4, 5=>5));
@@ -86,7 +86,7 @@ $formatted = "";
     <center>
 
         <div class="switcher">
-            <div><a href="settings.php" class="p-4"><i class="fa-solid fa-gear"></i></a> <a href="info.php" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
+            <div><a href="settings.php" class="p-4" disabled onclick="alert('Password reset functie staat uit')"><i class="fa-solid fa-gear"></i></a> <a href="info.php" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
             <a href="index.php" class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700">Kruizen</a> <a class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" href="cijfers.php" disabled>Cijfers</a>
         <br><br>
         </div>
