@@ -84,7 +84,7 @@ $formatted= $crossBoard->getFormatted();
     </style>
     <center>
         <div class="switcher">
-            <div><a href="settings.php" class="p-4" disabled onclick="alert('Password reset functie staat uit')"><i class="fa-solid fa-gear"></i></a> <a href="info.php" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
+            <div><a class="p-4" disabled onclick="alert('Password reset functie staat uit')"><i class="fa-solid fa-gear"></i></a> <a href="info.pdf" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
             <a href="#" class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" disabled>Kruizen</a> <a class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" href="cijfers.php">Cijfers</a>
         <br><br>
         </div>
