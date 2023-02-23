@@ -81,6 +81,8 @@ class Board
                     return "Pijl Links";
                 case 3:
                     return "Pijl Rechts";
+		case 4:
+		    return "All On";
             }
         } else {
             switch ($this->getCurrent()){
@@ -107,7 +109,7 @@ class Board
                     $this->formatted = "";
                     break;
                 case 1:
-                    $this->formatted = "<i class=\"fas fa-times text-red-500 fa-10x\"></i>";
+                    $this->formatted = "<i class=\"fas fa-times text-white fa-10x\"></i>";
                     break;
                 case 2:
                     $this->formatted = "<i class=\"fas fa-arrow-down rotate-45 ml-1 fa-10x text-white\"></i>";
@@ -115,6 +117,8 @@ class Board
                 case 3:
                     $this->formatted = "<i class=\"fas fa-arrow-down -rotate-45 ml-1 fa-10x text-white\"></i>";
                     break;
+		case 4:
+		    $this->formatted = "<i class=\"far fa-globe-europe ml-1 fa-10x text-white\"></i>";
             }
         } else {
             switch ($this->getCurrent()){

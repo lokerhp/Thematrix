@@ -48,14 +48,26 @@ $formatted= $crossBoard->getFormatted();
     if(isset($_POST['0'])) {
         $crossBoard->change(0);
         $formatted = $crossBoard->getFormatted();
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/off.sh');
     } else if(isset($_POST['1'])) {
         $crossBoard->change(1);
         $formatted = $crossBoard->getFormatted();
-    } else if(isset($_POST['2'])) {
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/off.sh');
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/cross.sh');
+	} else if(isset($_POST['2'])) {
         $crossBoard->change(2);
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/off.sh');
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/arrow_left.sh');
         $formatted = $crossBoard->getFormatted();
     } else if(isset($_POST['3'])) {
         $crossBoard->change(3);
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/off.sh');
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/arrow_right.sh');
+        $formatted = $crossBoard->getFormatted();
+    } else if(isset($_POST['4'])) {
+        $crossBoard->change(4);
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/off.sh');
+           exec('echo raspberry | /usr/bin/sudo -S /var/www/html/Thematrix/scripts/all.sh');
         $formatted = $crossBoard->getFormatted();
     }
     ?>
@@ -92,12 +104,12 @@ $formatted= $crossBoard->getFormatted();
         <?php echo $formatted; ?>
     </div>
     <form method="post">
-
         <br>
         <input type="submit" name="0" value="Uit" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 0) echo "disabled"?>/>
         <input type="submit" name="1" value="Kruis" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
         <input type="submit" name="2" value="Pijl Links" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
         <input type="submit" name="3" value="Pijl Rechts" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
+        <input type="submit" name="4" value="?" class="input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 4) echo "disabled"?>/>
     </form>
     </center>
 
