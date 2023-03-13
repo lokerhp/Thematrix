@@ -4,7 +4,7 @@ if(isset($_SESSION['loggedin'])){
     header("location:index.php");
 }
 if(isset($_POST['password'])){
-    if($_POST['password'] == "PWS"){
+    if($_POST['password'] == "PWS" || $_POST['password'] == "Verkeer"){
         $_SESSION['loggedin'] = "true";
         header("location:index.php");
     }
