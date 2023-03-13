@@ -96,7 +96,7 @@ $formatted= $crossBoard->getFormatted();
     </style>
     <center>
         <div class="switcher">
-            <div><a class="p-4" disabled onclick="alert('Password reset functie staat uit')"><i class="fa-solid fa-gear"></i></a> <a href="info.pdf" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
+            <div><a href="info.pdf" class="p-4"><i class="fa-solid fa-circle-info"></i></a> <a href="logout.php" class="p-4"><i class="fa-solid fa-right-from-bracket"></i></a></div><br>
             <a href="#" class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" disabled>Kruizen</a> <a class="switch_button disabled:opacity-75 bg-lime-600 hover:bg-lime-700 transition duration-50 ease-in-out hover:border-lime-700" href="cijfers.php">Cijfers</a>
         <br><br>
         </div>
@@ -109,7 +109,6 @@ $formatted= $crossBoard->getFormatted();
         <input type="submit" name="1" value="Kruis" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 1) echo "disabled"?>/>
         <input type="submit" name="2" value="Pijl Links" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 2) echo "disabled"?>/>
         <input type="submit" name="3" value="Pijl Rechts" class="w-40 input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 3) echo "disabled"?>/>
-        <input type="submit" name="4" value="?" class="input disabled:opacity-75 hover:bg-slate-900" <?php if($crossBoard->getCurrent() == 4) echo "disabled"?>/>
     </form>
     </center>
 
