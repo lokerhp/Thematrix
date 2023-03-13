@@ -1,1 +1,1 @@
-raspi-gpio set 3 dl
+raspi-gpio set 24 dl
